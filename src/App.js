@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Posts from "./components/posts";
+import Albums from "./components/albums";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6">
+                        POSTS SECTION
+                        <Posts/>
+                    </div>
+                    <div className="col-md-6">
+                        ALBUMS SECTION
+                        <Albums/>
+                    </div>
+                </div>
+                
+            </div>
+        )
+    }
 }
-
 export default App;
